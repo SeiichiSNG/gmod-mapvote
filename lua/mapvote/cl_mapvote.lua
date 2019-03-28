@@ -330,45 +330,27 @@ function PANEL:Flash(id)
     local bar = self:GetMapButton(id)
 
     if (IsValid(bar)) then
-        timer.Simple(
-            0.0,
-            function()
-                bar.bgColor = Color(0, 255, 255)
-                surface.PlaySound("hl1/fvox/blip.wav")
-            end
-        )
-        timer.Simple(
-            0.2,
-            function()
-                bar.bgColor = nil
-            end
-        )
-        timer.Simple(
-            0.4,
-            function()
-                bar.bgColor = Color(0, 255, 255)
-                surface.PlaySound("hl1/fvox/blip.wav")
-            end
-        )
-        timer.Simple(
-            0.6,
-            function()
-                bar.bgColor = nil
-            end
-        )
-        timer.Simple(
-            0.8,
-            function()
-                bar.bgColor = Color(0, 255, 255)
-                surface.PlaySound("hl1/fvox/blip.wav")
-            end
-        )
-        timer.Simple(
-            1.0,
-            function()
-                bar.bgColor = Color(100, 100, 100)
-            end
-        )
+        timer.Simple(0.0, function()
+            bar.bgColor = Color(0, 255, 255)
+            surface.PlaySound("hl1/fvox/blip.wav")
+        end)
+        timer.Simple(0.2, function()
+            bar.bgColor = nil
+        end)
+        timer.Simple(0.4, function()
+            bar.bgColor = Color(0, 255, 255)
+            surface.PlaySound("hl1/fvox/blip.wav")
+        end)
+        timer.Simple(0.6, function()
+            bar.bgColor = nil
+        end)
+        timer.Simple(0.8, function()
+            bar.bgColor = Color(0, 255, 255)
+            surface.PlaySound("hl1/fvox/blip.wav")
+        end)
+        timer.Simple(1.0, function()
+            bar.bgColor = Color(100, 100, 100)
+        end)
     end
 end
 
